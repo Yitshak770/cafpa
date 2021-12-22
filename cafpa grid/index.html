@@ -6,25 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../medias/favicon.png" type="image/x-png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/new-reset.css">
     <link rel="stylesheet" href="style/style.css">
     <title>Document</title>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="row">
-                <div class="col bartel">
-                    <pre>Nous contacter par téléphone au  <span class="gras">01 01 01 01 01</span></pre>
-                </div>
+        <div class="header"></div>
+        <!-- HEADER PARTIE SUPERIEURE -->
+            <!-- BARRE SUPERIEURE -->
+            <div class="bartel">
+                <pre>Nous contacter par téléphone au  <span class="gras">01 01 01 01 01</span></pre>
             </div>
-            <div class="row barsup ">
+            
+            <!-- BARRE PRINCIPALE DE MENU -->
+            <div class="barsup ">
                 
-                <div class="logosup col-4 col-md-6 col-lg-3 order-1">
-                    <img src="../medias/logo-cafpa.png" alt="logo" class="logo">
+                <!-- LOGO -->
+                <div class="logosup">
+                    <img src="medias/logo-cafpa.png" alt="logo" class="logo">
                 </div>
                 
-                <div class="menusup d-xs-none col-lg-6 order-3 order-lg-2 ">
+                <!-- MENU PRINCIPAL -->
+                <div class="menusup">
                     <div class="nav">
                         <a href="">L’École</a>
                     </div>
@@ -39,11 +43,13 @@
                     </div>
                 </div>
                 
-                <div class="telheader col-4 order-2 d-md-none">
+                <!-- TELEPHONE POUR SMARTPHONES -->
+                <div class="telheader">
                     <a href="tel:+331101010101">01 01 01 01 01</a>
                 </div>
                 
-                <div class="menuhamb col-4 order-2 d-md-none">
+                <!-- MENU HAMBURGER POUR SMARTPHONES -->
+                <div class="menuhamb">
                     <div class="troisbarres">
                         <i class="fas fa-bars"></i>
                     </div>
@@ -62,13 +68,16 @@
                         </div>
                     </div>
                 </div>
-       
-                <div class="login col-6 order-2 order-lg-3 col-lg-3">
+                
+                <!-- ESPACE CLIENT -->
+                <div class="login">
                     <a href="#">Espace client</a>
                 </div>
        
             </div>
-        </header>
+            <!-- BARRE PRINCIPALE DE MENU FIN -->
+        <!-- HEADER PARTIE INFERIEURE -->
+        </div>
     </div>
     <script src="script/hamburger.js"></script>
 </body>

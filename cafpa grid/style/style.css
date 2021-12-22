@@ -7,22 +7,47 @@
 @font-face {font-family: 'Pronave';
     src: url('../fonts/Pronave.otf') format('OpenType');
 }
-.bartel {
+/*---------------------HEADER BARRES SUPERIEURES-------------------------*/
+.telheader, .menuhamb {                             /* ELEMENTS SMARTPHONES CACHES */
+    display: none;
+    padding: 5px;
+}
+header {
+    display: grid;
+    background-color: rgb(200, 200, 200);;
+    width:100%;
+    padding: 0x 0px 65px 0px;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-areas:
+    "cel1 cel1 cel1 cel1"
+    "cel2 cel3 cel3 cel4";
+    
+}
+.bartel {                                          /* BARRE DE TELEPHONE AU DESSUS DU MENU */
     background-color: #b784a7;
     color : white;
     text-align: center;
     padding: 7px;
     font-family: 'hecsh_0', Helvetica, sans-serif;
     letter-spacing: 3px;
+    grid-area: cel1;
+    width:100%;
+    height: auto;
+    
 }
 .gras{
     font-weight: 1000;
     font-size: 16px;
     letter-spacing: 2px;
 }
-.barsup {
+.barsup {                                           /* BARRE DE MENU SUPERIEURE */
     display: flex;
+    justify-content: space-around;
+    margin: auto;
 }
+/******************* ELEMENTS DE BARSUP DEBUT ********************/
+/* LOGO */
 .logo {
     width: 150px;
     margin: auto;
@@ -31,18 +56,16 @@
     /* background-color: rgb(214, 214, 241); */
     display: flex;
     align-items:center;
+    grid-area: cel2;
 }
+/* MENU */ 
 .menusup{
     /* background-color: rgba(92, 167, 167, 0.384); */
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-area: cel3;
 }
-@media screen and (max-width: 768px) {
-    .menusup, .login, .bartel {
-      display:none!important;
-    }
-  }    
 .nav{
     display: inline-block;
     padding: 20px;
@@ -55,16 +78,64 @@
     font-size: 16px;
     font-family: 'hecsh_0', Helvetica, sans-serif;
 }
+.nav a:hover {
+    color: #357cae;
+}
+/* LOGIN ESPACE CLIENT */
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: cel4;
+}
+.login a {
+    /* background-color: #5e91b585; */
+    border: 1px solid #b784a7;
+    padding: 10px 20px;
+    color: rgba(41, 41, 41);
+    /* color: #357cae; */
+    font-weight: 500;
+    font-style: italic;
+    border-radius: 30px;
+    transition: 300ms ease-in-out;
+    margin-right: 20px;
+    font-family: 'Outfit-VariableFont_wght', Helvetica, sans-serif;
+    letter-spacing: 2px;
+    font-size: 13px;
+    
+}
+.login a:hover {
+    background-color: #5e91b5;
+    border: none;
+    padding: 10px 20px;
+    color: #f8f5f7;
+    border-radius: 20px;
+    transition: 300ms ease-in-out;
+}
+/******************* ELEMENTS DE BARSUP FIN ********************/
+
+/******************* DESIGN TABLETTES ET SMARTPHONES ***********/
+
+@media screen and (max-width: 840px) {
+    .menusup, .bartel {
+        display:none;
+    }
+    .telheader, .menuhamb {
+        display: flex;
+    }
+} 
+
+.telheader {
+    order:0;
+}
+.menuhamb {
+    order:2;
+}
 .hamburger {
     display:flex;
     flex-direction: column;
     position: absolute;
     left: -800px;
-    
-
-}
-.nav a:hover {
-    color: #357cae;
 }
 .fa-bars{
     color: #357cae;
@@ -95,10 +166,6 @@
 .navhamb a:hover{
     color:black;
 }
-.telheader{
-    display: flex;
-    padding: 5px;
-}
 .telheader a{
     /* text-align: center; */
     border-radius: 25px;
@@ -113,32 +180,4 @@
     font-family: 'hecsh_0', Helvetica, sans-serif;
     letter-spacing: 1px;
 }
-.login{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.login a {
-    /* background-color: #5e91b585; */
-    border: 1px solid #b784a7;
-    padding: 10px 20px;
-    color: rgba(41, 41, 41);
-    /* color: #357cae; */
-    font-weight: 500;
-    font-style: italic;
-    border-radius: 30px;
-    transition: 300ms ease-in-out;
-    margin-right: 20px;
-    font-family: 'Outfit-VariableFont_wght', Helvetica, sans-serif;
-    letter-spacing: 2px;
-    font-size: 13px;
-    
-}
-.login a:hover {
-    background-color: #5e91b5;
-    border: none;
-    padding: 10px 20px;
-    color: #f8f5f7;
-    border-radius: 20px;
-    transition: 300ms ease-in-out;
-}
+/*---------------------HEADER MAIN HEADER-------------------------*/
