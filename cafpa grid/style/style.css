@@ -12,18 +12,6 @@
     display: none;
     padding: 5px;
 }
-header {
-    display: grid;
-    background-color: rgb(200, 200, 200);;
-    width:100%;
-    padding: 0x 0px 65px 0px;
-    column-gap: 10px;
-    row-gap: 10px;
-    grid-template-areas:
-    "cel1 cel1 cel1 cel1"
-    "cel2 cel3 cel3 cel4";
-    
-}
 .bartel {                                          /* BARRE DE TELEPHONE AU DESSUS DU MENU */
     background-color: #b784a7;
     color : white;
@@ -31,10 +19,6 @@ header {
     padding: 7px;
     font-family: 'hecsh_0', Helvetica, sans-serif;
     letter-spacing: 3px;
-    grid-area: cel1;
-    width:100%;
-    height: auto;
-    
 }
 .gras{
     font-weight: 1000;
@@ -43,8 +27,7 @@ header {
 }
 .barsup {                                           /* BARRE DE MENU SUPERIEURE */
     display: flex;
-    justify-content: space-around;
-    margin: auto;
+    justify-content: space-around;    
 }
 /******************* ELEMENTS DE BARSUP DEBUT ********************/
 /* LOGO */
@@ -53,18 +36,14 @@ header {
     margin: auto;
 }
 .logosup{
-    /* background-color: rgb(214, 214, 241); */
     display: flex;
     align-items:center;
-    grid-area: cel2;
 }
 /* MENU */ 
 .menusup{
-    /* background-color: rgba(92, 167, 167, 0.384); */
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-area: cel3;
 }
 .nav{
     display: inline-block;
@@ -73,27 +52,25 @@ header {
 .nav a {
     color: rgb(41, 41, 41);
     text-transform: uppercase;
-    /* font-weight: 100; */
     letter-spacing: 2px;
     font-size: 16px;
     font-family: 'hecsh_0', Helvetica, sans-serif;
 }
 .nav a:hover {
     color: #357cae;
+    cursor: pointer;
 }
 /* LOGIN ESPACE CLIENT */
 .login{
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-area: cel4;
 }
 .login a {
-    /* background-color: #5e91b585; */
     border: 1px solid #b784a7;
     padding: 10px 20px;
     color: rgba(41, 41, 41);
-    /* color: #357cae; */
+    color: #357cae;
     font-weight: 500;
     font-style: italic;
     border-radius: 30px;
@@ -102,7 +79,7 @@ header {
     font-family: 'Outfit-VariableFont_wght', Helvetica, sans-serif;
     letter-spacing: 2px;
     font-size: 13px;
-    
+    cursor: pointer;
 }
 .login a:hover {
     background-color: #5e91b5;
@@ -124,18 +101,11 @@ header {
         display: flex;
     }
 } 
-
 .telheader {
     order:0;
 }
 .menuhamb {
     order:2;
-}
-.hamburger {
-    display:flex;
-    flex-direction: column;
-    position: absolute;
-    left: -800px;
 }
 .fa-bars{
     color: #357cae;
@@ -146,25 +116,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.navhamb{
-    background-color: #357cae; ;
-    padding: 12px 30px 0px 30px;
-    
-}
-.navhambfin{
-    padding-bottom: 12px;
-}
-.navhamb a {
-    color: white;
-    text-transform: uppercase;
-    /* font-weight: 100; */
-    letter-spacing: 2px;
-    font-size: 12px;
-    font-family: 'hecsh_0', Helvetica, sans-serif;
-}
-.navhamb a:hover{
-    color:black;
 }
 .telheader a{
     /* text-align: center; */
@@ -180,4 +131,47 @@ header {
     font-family: 'hecsh_0', Helvetica, sans-serif;
     letter-spacing: 1px;
 }
+/* MENU HAMBURGER */
+.hamburger {
+    display:flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    left: -800px;
+    /* left : 60%; */
+}
+.navhamb{
+    background-color: #357cae; ;
+    padding: 12px 30px 0px 30px;   
+}
+.navhambfin{
+    padding-bottom: 12px;
+}
+.navhamb a {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-family: 'hecsh_0', Helvetica, sans-serif;
+}
+.navhamb a:hover{
+    color:black;
+}
+@media screen and (max-width: 540px) {
+    .login-hamb {
+        display: block;
+    }
+    .telheader a{  
+        font-size: 13px;
+        padding: 7px 12px;
+        margin-left: -15%;
+    }
+    .fa-bars{   
+        font-size: 35px; 
+        margin-top: 0;
+    }
+    .login {
+        display: none;    
+    }
+} 
 /*---------------------HEADER MAIN HEADER-------------------------*/
